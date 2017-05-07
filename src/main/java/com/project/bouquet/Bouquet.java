@@ -1,4 +1,4 @@
-package com.project.util;
+package com.project.bouquet;
 
 import com.project.flowers.Flower;
 

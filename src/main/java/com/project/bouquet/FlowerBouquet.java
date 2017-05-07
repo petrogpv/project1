@@ -1,7 +1,8 @@
-package com.project.util;
+package com.project.bouquet;
 
 import com.project.accessories.Accessory;
 import com.project.flowers.Flower;
+import com.project.util.SortStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,10 +38,6 @@ public class FlowerBouquet implements Bouquet {
         return null;
     }
 
-    public static Builder newBuilder() {
-        return new FlowerBouquet().new Builder();
-    }
-
     public List<Flower> getFlowers() {
         return flowers;
     }
@@ -55,6 +52,10 @@ public class FlowerBouquet implements Bouquet {
 
     public void setAccessories(List<Accessory> accessories) {
         this.accessories = accessories;
+    }
+
+    public static Builder newBuilder() {
+        return new FlowerBouquet().new Builder();
     }
 
     public class Builder {

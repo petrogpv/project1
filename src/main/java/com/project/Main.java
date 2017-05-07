@@ -4,8 +4,7 @@ import com.project.accessories.Accessory;
 import com.project.accessories.AccessoryType;
 import com.project.flowers.Flower;
 import com.project.flowers.RedRose;
-import com.project.util.Bouquet;
-import com.project.util.FlowerBouquet;
+import com.project.bouquet.FlowerBouquet;
 
 public class Main {
 
