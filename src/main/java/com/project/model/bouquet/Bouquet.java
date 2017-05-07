@@ -1,5 +1,6 @@
 package com.project.model.bouquet;
 
+import com.project.model.accessories.Accessory;
 import com.project.model.flowers.Flower;
 
 import java.util.List;
@@ -15,4 +16,7 @@ public interface Bouquet {
 
     public List<Flower> getFlowersFromStemDiapason(double bottomLimit, double topLimit);
 
+    public List<Flower> getFlowers();
+
+    public List<Accessory> getAccessories();
 }

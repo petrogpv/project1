@@ -3,7 +3,7 @@ package com.project.model.accessories;
 /**
  * Created by Ярослав on 07.05.2017.
  */
-public abstract class Accessory {
+public class Accessory {
 
     private AccessoryType type;
 
@@ -30,5 +30,10 @@ public abstract class Accessory {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "{type: " + type + ", price: " + price + "}";
     }
 }

@@ -2,6 +2,7 @@ package com.project.model.flowers;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Ярослав on 07.05.2017.
@@ -77,5 +78,16 @@ public abstract class Flower {
 
     public void setCutoffDay(Date cutoffDay) {
         this.cutoffDay = cutoffDay;
+    }
+
+    @Override
+    public String toString() {
+        return "{bud diameter: " + budDiameter +
+               ", stem length: " + stemLength +
+               ", isSpiked: " + isSpiked +
+               ", colors: " + colors.stream().map(FlowerColors::toString).collect(Collectors.joining(", ")) +
+               ", price: " + price +
+               ", cutoff date: " + cutoffDay +
+               "}";
     }
 }
