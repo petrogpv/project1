@@ -1,4 +1,4 @@
-package com.project.flowers;
+package com.project.model.flowers;
 
 import java.util.Date;
 import java.util.List;
@@ -61,5 +61,21 @@ public abstract class Flower {
 
     public void setColors(List<FlowerColors> colors) {
         this.colors = colors;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public Date getCutoffDay() {
+        return cutoffDay;
+    }
+
+    public void setCutoffDay(Date cutoffDay) {
+        this.cutoffDay = cutoffDay;
     }
 }

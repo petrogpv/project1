@@ -1,10 +1,10 @@
 package com.project;
 
-import com.project.accessories.Accessory;
-import com.project.accessories.AccessoryType;
-import com.project.flowers.Flower;
-import com.project.flowers.RedRose;
-import com.project.bouquet.FlowerBouquet;
+import com.project.model.accessories.Accessory;
+import com.project.model.accessories.AccessoryType;
+import com.project.model.flowers.Flower;
+import com.project.model.flowers.RedRose;
+import com.project.model.bouquet.FlowerBouquet;
 
 public class Main {
 

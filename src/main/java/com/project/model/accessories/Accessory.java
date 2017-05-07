@@ -1,4 +1,4 @@
-package com.project.accessories;
+package com.project.model.accessories;
 
 /**
  * Created by Ярослав on 07.05.2017.

@@ -1,4 +1,4 @@
-package com.project.flowers;
+package com.project.model.flowers;
 
 /**
  * Created by Ярослав on 07.05.2017.

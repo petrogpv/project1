@@ -1,6 +1,6 @@
-package com.project.bouquet;
+package com.project.model.bouquet;
 
-import com.project.flowers.Flower;
+import com.project.model.flowers.Flower;
 
 import java.util.List;
 

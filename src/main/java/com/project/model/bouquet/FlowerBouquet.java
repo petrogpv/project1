@@ -1,8 +1,9 @@
-package com.project.bouquet;
+package com.project.model.bouquet;
 
-import com.project.accessories.Accessory;
-import com.project.flowers.Flower;
-import com.project.util.SortStrategy;
+import com.project.model.accessories.Accessory;
+import com.project.model.flowers.Flower;
+import com.project.model.util.FlowersSortStrategy;
+import com.project.model.util.SortStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,26 +17,37 @@ public class FlowerBouquet implements Bouquet {
 
     private List<Accessory> accessories;
 
-    private SortStrategy sortStrategy;
+    private SortStrategy<Flower> sortStrategy;
 
     public FlowerBouquet() {
         flowers = new ArrayList<Flower>();
         accessories = new ArrayList<Accessory>();
+        sortStrategy = new FlowersSortStrategy();
     }
 
     @Override
     public void sort() {
-
+        sortStrategy.sort(flowers);
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        double price = 0;
+
+        price += flowers.stream().mapToDouble(Flower::getPrice).sum();
+        price += accessories.stream().mapToDouble(Accessory::getPrice).sum();
+
+        return price;
     }
 
     @Override
     public List<Flower> getFlowersFromStemDiapason(double bottomLimit, double topLimit) {
-        return null;
+        List<Flower> result = new ArrayList<>();
+
+        flowers.stream().filter(flower -> flower.getPrice() >= bottomLimit && flower.getPrice() <= topLimit)
+               .forEach(result::add);
+
+        return result;
     }
 
     public List<Flower> getFlowers() {

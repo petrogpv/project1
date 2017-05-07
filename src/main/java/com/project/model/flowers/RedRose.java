@@ -1,4 +1,4 @@
-package com.project.flowers;
+package com.project.model.flowers;
 
 import java.util.Date;
 import java.util.List;
