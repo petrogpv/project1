@@ -14,4 +14,5 @@ public interface Bouquet {
     public double getPrice();
 
     public List<Flower> getFlowersFromStemDiapason(double bottomLimit, double topLimit);
+
 }
