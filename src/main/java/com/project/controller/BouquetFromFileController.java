@@ -93,7 +93,6 @@ public class BouquetFromFileController {
         return bouquet.getFlowersFromStemDiapason(min, max);
     }
 
-
     private FlowerBouquet initializeBouquet() {
         List<String[]> entries = getEntriesFromFile(Constants.BOUQUET_FILE_PATH);
         FlowerBouquet.Builder builder = FlowerBouquet.newBuilder();
