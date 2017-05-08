@@ -50,6 +50,16 @@ public class FlowerBouquet implements Bouquet {
         return result;
     }
 
+    @Override
+    public void addFlower(Flower flower) {
+        this.flowers.add(flower);
+    }
+
+    @Override
+    public void addAccessory(Accessory accessory) {
+        this.accessories.add(accessory);
+    }
+
     public List<Flower> getFlowers() {
         return flowers;
     }

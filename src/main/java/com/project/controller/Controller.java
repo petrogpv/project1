@@ -1,7 +1,10 @@
 package com.project.controller;
 
+import com.project.model.bouquet.Bouquet;
+import com.project.model.flowers.Flower;
 import com.project.view.View;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -21,14 +24,14 @@ public class Controller {
             view.printBaseMenu();
 
             while(!scanner.hasNextInt()) {
-                view.printIncorrectChoice();
+                view.printIncorrectChoiceMessage();
                 view.printBaseMenu();
                 scanner.next();
             }
 
             userSelection = scanner.nextInt();
             if(!checkInput(userSelection)) {
-                view.printIncorrectChoice();
+                view.printIncorrectChoiceMessage();
                 continue;
             }
 
@@ -51,5 +54,27 @@ public class Controller {
 
     private void processNewBouquet(Scanner scanner) {
         new NewBouquetController().processNewBouquet(scanner);
+    }
+
+    protected List<Flower> processSearch(Scanner scanner, Bouquet bouquet){
+        double min, max;
+
+        view.printBottomLimit();
+        while(!scanner.hasNextDouble()) {
+            view.printIncorrectChoiceMessage();
+            view.printBottomLimit();
+            scanner.next();
+        }
+        min = scanner.nextDouble();
+
+        view.printTopLimit();
+        while (!scanner.hasNextDouble()) {
+            view.printTopLimit();
+            view.printIncorrectChoiceMessage();
+            scanner.next();
+        }
+        max = scanner.nextDouble();
+
+        return bouquet.getFlowersFromStemDiapason(min, max);
     }
 }

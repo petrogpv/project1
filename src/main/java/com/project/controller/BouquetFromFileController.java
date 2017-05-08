@@ -7,21 +7,17 @@ import com.project.model.bouquet.Bouquet;
 import com.project.model.bouquet.FlowerBouquet;
 import com.project.model.flowers.Flower;
 import com.project.model.flowers.FlowerColors;
-import com.project.model.flowers.RegularFlower;
 import com.project.view.View;
 
-import javax.annotation.Resource;
 import java.io.*;
-import java.net.URI;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.util.*;
 
 /**
  * Created by Ярослав on 07.05.2017.
  */
-public class BouquetFromFileController {
+public class BouquetFromFileController extends Controller{
 
     private final int BOTTOM_SELECTION_VALUE = 1;
     private final int TOP_SELECTION_VALUE = 5;
@@ -44,14 +40,14 @@ public class BouquetFromFileController {
             view.printBouquetFromFileMenu();
 
             while(!scanner.hasNextInt()) {
-                view.printIncorrectChoice();
+                view.printIncorrectChoiceMessage();
                 view.printBouquetFromFileMenu();
                 scanner.next();
             }
 
             userSelection = scanner.nextInt();
             if(!checkInput(userSelection)) {
-                view.printIncorrectChoice();
+                view.printIncorrectChoiceMessage();
                 continue;
             }
 
@@ -69,28 +65,6 @@ public class BouquetFromFileController {
 
     private boolean checkInput(int input) {
         return input >= BOTTOM_SELECTION_VALUE && input <= TOP_SELECTION_VALUE;
-    }
-
-    private List<Flower> processSearch(Scanner scanner, Bouquet bouquet){
-        double min, max;
-
-        view.printBottomLimit();
-        while(!scanner.hasNextDouble()) {
-            view.printIncorrectChoice();
-            view.printBottomLimit();
-            scanner.next();
-        }
-        min = scanner.nextDouble();
-
-        view.printTopLimit();
-        while (!scanner.hasNextDouble()) {
-            view.printTopLimit();
-            view.printIncorrectChoice();
-            scanner.next();
-        }
-        max = scanner.nextDouble();
-
-        return bouquet.getFlowersFromStemDiapason(min, max);
     }
 
     private FlowerBouquet initializeBouquet() {
@@ -112,7 +86,7 @@ public class BouquetFromFileController {
     }
 
     private Flower constructFlower(String[] entry) {
-        Flower flower = new RegularFlower();
+        Flower flower = new Flower();
 
         flower.setBudDiameter(Double.parseDouble(entry[1]));
         flower.setStemLength(Double.parseDouble(entry[2]));

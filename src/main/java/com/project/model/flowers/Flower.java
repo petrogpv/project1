@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 /**
  * Created by Ярослав on 07.05.2017.
  */
-public abstract class Flower {
+public class Flower {
 
     private double budDiameter;
 

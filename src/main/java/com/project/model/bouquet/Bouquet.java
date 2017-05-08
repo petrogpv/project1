@@ -19,4 +19,8 @@ public interface Bouquet {
     public List<Flower> getFlowers();
 
     public List<Accessory> getAccessories();
+
+    public void addFlower(Flower flower);
+
+    public void addAccessory(Accessory accessory);
 }
