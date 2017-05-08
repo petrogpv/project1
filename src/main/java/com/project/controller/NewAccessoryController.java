@@ -49,7 +49,7 @@ public class NewAccessoryController {
                 accessory.setType(accessoryType);
             }
 
-            double price = chooseRpice(scanner);
+            double price = choosePrice(scanner);
             accessory.setPrice(price);
 
             break;
@@ -62,7 +62,7 @@ public class NewAccessoryController {
         return input == WRAPPING_PAPER || input == RIBBONS;
     }
 
-    public double chooseRpice(Scanner scanner) {
+    public double choosePrice(Scanner scanner) {
         double price;
 
         while (true) {

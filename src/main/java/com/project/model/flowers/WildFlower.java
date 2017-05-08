@@ -13,8 +13,8 @@ public class WildFlower extends Flower {
     }
 
     public WildFlower(double budDiameter, double stemLength, boolean isSpiked, List<FlowerColors> colors,
-                      double price, Date cutoffDay, boolean havingBuld) {
-        super(budDiameter, stemLength, isSpiked, colors, price, cutoffDay);
+                      double price, double hoursAfterCutOff, boolean havingBuld) {
+        super(budDiameter, stemLength, isSpiked, colors, price, hoursAfterCutOff);
         this.havingBuld = havingBuld;
     }
 

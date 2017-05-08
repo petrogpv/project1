@@ -75,11 +75,6 @@ public class View {
         bouquet.getAccessories().forEach(System.out::println);
     }
 
-    public void printAddFlowerMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
-        System.out.println(resourceBundle.getString("add.flower.message"));
-    }
-
     public void printAddAccessoryMessage() {
         ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
         String message = resourceBundle.getString("new.accessory.type") + "\n" +
@@ -89,8 +84,53 @@ public class View {
         System.out.println(message);
     }
 
-    public  void printSelectPriceMessage() {
+    public void printSelectPriceMessage() {
         ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
         System.out.println(resourceBundle.getString("new.accessory.price"));
+    }
+
+    public void printAddFlowerMessage() {
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        String message = resourceBundle.getString("new.flower.type") + "\n" +
+                resourceBundle.getString("new.flower.type.berry") + "\n" +
+                resourceBundle.getString("new.flower.type.wild") + "\n" +
+                resourceBundle.getString("new.flower.type.regular");
+
+        System.out.println(message);
+    }
+
+    public void printSelectBudDiameterMessage() {
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        System.out.println(resourceBundle.getString("new.flower.diameter"));
+    }
+
+    public void printSelectStemLengthMessage() {
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        System.out.println(resourceBundle.getString("new.flower.stem"));
+    }
+
+    public void printSelectSpikedMessage() {
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        System.out.println(resourceBundle.getString("new.flower.spiked"));
+    }
+
+    public void printColorSelectionMenu() {
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        String menu = resourceBundle.getString("new.flower.color") + "\n" +
+                resourceBundle.getString("new.flower.color.red") + "\n" +
+                resourceBundle.getString("new.flower.color.orange") + "\n" +
+                resourceBundle.getString("new.flower.color.blue") + "\n" +
+                resourceBundle.getString("new.flower.color.white") + "\n" +
+                resourceBundle.getString("new.flower.color.green") + "\n" +
+                resourceBundle.getString("new.flower.color.yellow") + "\n" +
+                resourceBundle.getString("new.flower.color.pink") + "\n" +
+                resourceBundle.getString("new.flower.color.end");
+
+        System.out.println(menu);
+    }
+
+    public void printSelectHoursAfterCutOffMessage() {
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        System.out.println(resourceBundle.getString("new.flower.hours"));
     }
 }

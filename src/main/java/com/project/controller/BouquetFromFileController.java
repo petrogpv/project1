@@ -93,7 +93,7 @@ public class BouquetFromFileController extends Controller{
         flower.setSpiked(Boolean.parseBoolean(entry[3]));
         flower.setColors(Arrays.asList(FlowerColors.valueOf(entry[4])));
         flower.setPrice(Double.parseDouble(entry[5]));
-        flower.setCutoffDay(new Date(Long.parseLong(entry[6])));
+        flower.setHoursAfterCutoff(Double.parseDouble((entry[6])));
 
         return flower;
     }

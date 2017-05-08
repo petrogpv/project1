@@ -4,7 +4,7 @@ package com.project.model.flowers;
  * Created by Ярослав on 07.05.2017.
  */
 public enum FlowerColors {
-    RED("red"), ORANGE("orange"), BLUE("blue"), WHITE("green"),
+    RED("red"), ORANGE("orange"), BLUE("blue"), WHITE("white"),
     GREEN("green"), YELLOW("yellow"), PINK("pink");
 
     private String color;

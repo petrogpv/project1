@@ -1,5 +1,6 @@
 package com.project.model.flowers;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,17 +20,20 @@ public class Flower {
 
     private double price;
 
-    private Date cutoffDay;
+    private double hoursAfterCutoff;
 
-    public Flower() {}
+    public Flower() {
+        colors = new ArrayList<>();
+    }
 
-    public Flower(double budDiameter, double stemLength, boolean isSpiked, List<FlowerColors> colors, double price, Date cutoffDay) {
+    public Flower(double budDiameter, double stemLength, boolean isSpiked, List<FlowerColors> colors,
+                  double price, double hoursAfterCutoff) {
         this.budDiameter = budDiameter;
         this.stemLength = stemLength;
         this.isSpiked = isSpiked;
         this.colors = colors;
         this.price = price;
-        this.cutoffDay = cutoffDay;
+        this.hoursAfterCutoff = hoursAfterCutoff;
     }
 
     public double getBudDiameter() {
@@ -72,12 +76,12 @@ public class Flower {
         this.price = price;
     }
 
-    public Date getCutoffDay() {
-        return cutoffDay;
+    public double getHoursAfterCutoff() {
+        return hoursAfterCutoff;
     }
 
-    public void setCutoffDay(Date cutoffDay) {
-        this.cutoffDay = cutoffDay;
+    public void setHoursAfterCutoff(double hoursAfterCutoff) {
+        this.hoursAfterCutoff = hoursAfterCutoff;
     }
 
     @Override
@@ -87,7 +91,7 @@ public class Flower {
                ", isSpiked: " + isSpiked +
                ", colors: " + colors.stream().map(FlowerColors::toString).collect(Collectors.joining(", ")) +
                ", price: " + price +
-               ", cutoff date: " + cutoffDay +
+               ", hours after cutoff: " + hoursAfterCutoff +
                "}";
     }
 }

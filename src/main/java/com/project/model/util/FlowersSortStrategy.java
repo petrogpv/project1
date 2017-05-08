@@ -14,7 +14,7 @@ public class FlowersSortStrategy implements SortStrategy<Flower>{
         list.sort(new Comparator<Flower>() {
             @Override
             public int compare(Flower firstFlower, Flower secondFlower) {
-                return firstFlower.getCutoffDay().compareTo(secondFlower.getCutoffDay());
+                return (int) (firstFlower.getHoursAfterCutoff() - secondFlower.getHoursAfterCutoff());
             }
         });
     }

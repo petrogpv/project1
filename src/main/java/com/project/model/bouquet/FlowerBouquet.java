@@ -44,7 +44,7 @@ public class FlowerBouquet implements Bouquet {
     public List<Flower> getFlowersFromStemDiapason(double bottomLimit, double topLimit) {
         List<Flower> result = new ArrayList<>();
 
-        flowers.stream().filter(flower -> flower.getPrice() >= bottomLimit && flower.getPrice() <= topLimit)
+        flowers.stream().filter(flower -> flower.getStemLength() >= bottomLimit && flower.getStemLength() <= topLimit)
                .forEach(result::add);
 
         return result;
