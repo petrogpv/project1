@@ -24,9 +24,9 @@ public class BouquetTest {
     public void testAddToBouquet() {
         Bouquet bouquet = BouquetFactory.getFlowerBouquet();
 
-        Flower rose = new Flower(7, 30, true, Arrays.asList(FlowerColors.RED), 10, 5);
-        Flower chamomile = new WildFlower(3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5, 6, false);
-        Flower anotherChamomile = new WildFlower(3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5, 7, false);
+        Flower rose = new Flower("Rose", 7, 30, true, Arrays.asList(FlowerColors.RED), 10, 5);
+        Flower chamomile = new WildFlower("Chamomile", 3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5, 6, false);
+        Flower anotherChamomile = new WildFlower("Chamomile", 3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5, 7, false);
         Accessory paper = new Accessory(AccessoryType.WRAPPING_PAPER, 5);
 
         bouquet.addFlower(rose);
@@ -44,7 +44,7 @@ public class BouquetTest {
 
         Bouquet bouquet = BouquetFactory.getFlowerBouquet();
 
-        Flower rose = new Flower(7, 30, true, Arrays.asList(FlowerColors.RED), ROSE_PRICE, 5);
+        Flower rose = new Flower("Rose", 7, 30, true, Arrays.asList(FlowerColors.RED), ROSE_PRICE, 5);
         Accessory accessory = new Accessory(AccessoryType.WRAPPING_PAPER, PAPER_PRICE);
 
         bouquet.addFlower(rose);
@@ -61,10 +61,10 @@ public class BouquetTest {
 
         Bouquet bouquet = BouquetFactory.getFlowerBouquet();
 
-        Flower rose = new Flower(7, 30, true, Arrays.asList(FlowerColors.RED), 10, ROSE_CUTOFF_TIME);
-        Flower chamomile = new WildFlower(3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5,
+        Flower rose = new Flower("Rose", 7, 30, true, Arrays.asList(FlowerColors.RED), 10, ROSE_CUTOFF_TIME);
+        Flower chamomile = new WildFlower("Chamomile", 3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5,
                 CHAMOMILE_CUTOFF_TIME, false);
-        Flower anotherChamomile = new WildFlower(3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5,
+        Flower anotherChamomile = new WildFlower("Chamomile", 3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5,
                 ANOTHER_CHAMOMILE_CUTOFF_TIME, false);
 
         bouquet.addFlower(rose);
@@ -85,11 +85,11 @@ public class BouquetTest {
 
         Bouquet bouquet = BouquetFactory.getFlowerBouquet();
 
-        Flower rose = new Flower(7, ROSE_STEM_LENGTH, true, Arrays.asList(FlowerColors.RED), 10, 5);
-        Flower chamomile = new WildFlower(3, 20, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5,
-                7, false);
-        Flower anotherChamomile = new WildFlower(3, CHAMOMILE_STEM_LENGTH, false, Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5,
-                6, false);
+        Flower rose = new Flower("Rose", 5, ROSE_STEM_LENGTH, true, Arrays.asList(FlowerColors.RED), 10, 5);
+        Flower chamomile = new WildFlower("Chamomile", 3, CHAMOMILE_STEM_LENGTH, false,
+                Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5, 7, false);
+        Flower anotherChamomile = new WildFlower("Chamomile", 3, CHAMOMILE_STEM_LENGTH, false,
+                Arrays.asList(FlowerColors.WHITE, FlowerColors.YELLOW), 5, 6, false);
 
         bouquet.addFlower(rose);
         bouquet.addFlower(chamomile);

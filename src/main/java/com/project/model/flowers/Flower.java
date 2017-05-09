@@ -10,6 +10,8 @@ import java.util.stream.Collectors;
  */
 public class Flower {
 
+    private String name;
+
     private double budDiameter;
 
     private double stemLength;
@@ -26,14 +28,23 @@ public class Flower {
         colors = new ArrayList<>();
     }
 
-    public Flower(double budDiameter, double stemLength, boolean isSpiked, List<FlowerColors> colors,
+    public Flower(String name, double budDiameter, double stemLength, boolean isSpiked, List<FlowerColors> colors,
                   double price, double hoursAfterCutoff) {
+        this.name = name;
         this.budDiameter = budDiameter;
         this.stemLength = stemLength;
         this.isSpiked = isSpiked;
         this.colors = colors;
         this.price = price;
         this.hoursAfterCutoff = hoursAfterCutoff;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getBudDiameter() {
@@ -96,7 +107,8 @@ public class Flower {
 
         Flower flower = (Flower) (obj);
 
-        return this.budDiameter == flower.budDiameter &&
+        return this.name.equals(flower.getName()) &&
+               this.budDiameter == flower.budDiameter &&
                this.stemLength == flower.stemLength &&
                this.isSpiked == flower.isSpiked &&
                this.colors.equals(flower.colors) &&
@@ -106,7 +118,8 @@ public class Flower {
 
     @Override
     public String toString() {
-        return "{bud diameter: " + budDiameter +
+        return "{name: " + name +
+               ", bud diameter: " + budDiameter +
                ", stem length: " + stemLength +
                ", isSpiked: " + isSpiked +
                ", colors: " + colors.stream().map(FlowerColors::toString).collect(Collectors.joining(", ")) +

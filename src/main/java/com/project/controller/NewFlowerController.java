@@ -27,6 +27,9 @@ public class NewFlowerController {
 
         flower = chooseFlowerType(scanner);
 
+        view.printSelectNameMessage();
+        flower.setName(scanner.next());
+
         view.printSelectBudDiameterMessage();
         flower.setBudDiameter(readDouble(scanner));
 
@@ -147,4 +150,5 @@ public class NewFlowerController {
 
         return colors;
     }
+
 }

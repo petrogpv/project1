@@ -12,9 +12,9 @@ public class BerryFlower extends Flower {
 
     public BerryFlower() {}
 
-    public BerryFlower(double budDiameter, double stemLength, boolean isSpiked, List<FlowerColors> colors,
+    public BerryFlower(String name, double budDiameter, double stemLength, boolean isSpiked, List<FlowerColors> colors,
                        double price, double hoursAfterCutOf, int numberOfBerries) {
-        super(budDiameter, stemLength, isSpiked, colors, price, hoursAfterCutOf);
+        super(name, budDiameter, stemLength, isSpiked, colors, price, hoursAfterCutOf);
         this.numberOfBerries = numberOfBerries;
     }
 

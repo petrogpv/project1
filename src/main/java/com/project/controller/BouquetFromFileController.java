@@ -88,12 +88,13 @@ public class BouquetFromFileController extends Controller{
     private Flower constructFlower(String[] entry) {
         Flower flower = new Flower();
 
-        flower.setBudDiameter(Double.parseDouble(entry[1]));
-        flower.setStemLength(Double.parseDouble(entry[2]));
-        flower.setSpiked(Boolean.parseBoolean(entry[3]));
-        flower.setColors(Arrays.asList(FlowerColors.valueOf(entry[4])));
-        flower.setPrice(Double.parseDouble(entry[5]));
-        flower.setHoursAfterCutoff(Double.parseDouble((entry[6])));
+        flower.setName(entry[1]);
+        flower.setBudDiameter(Double.parseDouble(entry[2]));
+        flower.setStemLength(Double.parseDouble(entry[3]));
+        flower.setSpiked(Boolean.parseBoolean(entry[4]));
+        flower.setColors(Arrays.asList(FlowerColors.valueOf(entry[5])));
+        flower.setPrice(Double.parseDouble(entry[6]));
+        flower.setHoursAfterCutoff(Double.parseDouble((entry[7])));
 
         return flower;
     }

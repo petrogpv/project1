@@ -100,6 +100,11 @@ public class View {
         System.out.println(message);
     }
 
+    public void printSelectNameMessage() {
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
+        System.out.println(resourceBundle.getString("new.flower.name"));
+    }
+
     public void printSelectBudDiameterMessage() {
         ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("new.flower.diameter"));
