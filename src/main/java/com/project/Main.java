@@ -7,6 +7,8 @@ import com.project.model.flowers.Flower;
 import com.project.model.bouquet.FlowerBouquet;
 
 import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Main {

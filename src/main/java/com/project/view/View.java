@@ -1,6 +1,7 @@
 package com.project.view;
 
 import com.project.model.bouquet.Bouquet;
+import com.project.model.util.ResourceBundleManager;
 
 import java.util.List;
 import java.util.Locale;
@@ -20,7 +21,7 @@ public class View {
     }
 
     public void printBaseMenu() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         String menu = "\n" + resourceBundle.getString("menu.bouquet.file") + "\n" +
                 resourceBundle.getString("menu.bouquet.new") + "\n" +
                 resourceBundle.getString("menu.exit");
@@ -28,7 +29,7 @@ public class View {
     }
 
     public void printBouquetFromFileMenu() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         String menu = "\n" + resourceBundle.getString("menu.file.show") + "\n" +
                 resourceBundle.getString("menu.file.price") + "\n" +
                 resourceBundle.getString("menu.file.sort") + "\n" +
@@ -38,7 +39,7 @@ public class View {
     }
 
     public void printNewBouquetMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         String menu = "\n" + resourceBundle.getString("menu.new.bouquet") + "\n" +
                 resourceBundle.getString("menu.new.show") + "\n" +
                 resourceBundle.getString("menu.new.add.flower") + "\n" +
@@ -51,22 +52,22 @@ public class View {
     }
 
     public void printIncorrectChoiceMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("menu.incorrect"));
     }
 
     public void printBottomLimit() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("search.bottom"));
     }
 
     public void printTopLimit() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("search.top"));
     }
 
     public String getErrorMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         return resourceBundle.getString("error") + " ";
     }
 
@@ -76,7 +77,7 @@ public class View {
     }
 
     public void printAddAccessoryMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         String message = resourceBundle.getString("new.accessory.type") + "\n" +
                 resourceBundle.getString("new.accessory.type.paper") + "\n" +
                 resourceBundle.getString("new.accessory.type.ribbons");
@@ -85,12 +86,12 @@ public class View {
     }
 
     public void printSelectPriceMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("new.accessory.price"));
     }
 
     public void printAddFlowerMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         String message = resourceBundle.getString("new.flower.type") + "\n" +
                 resourceBundle.getString("new.flower.type.berry") + "\n" +
                 resourceBundle.getString("new.flower.type.wild") + "\n" +
@@ -100,22 +101,22 @@ public class View {
     }
 
     public void printSelectBudDiameterMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("new.flower.diameter"));
     }
 
     public void printSelectStemLengthMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("new.flower.stem"));
     }
 
     public void printSelectSpikedMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("new.flower.spiked"));
     }
 
     public void printColorSelectionMenu() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         String menu = resourceBundle.getString("new.flower.color") + "\n" +
                 resourceBundle.getString("new.flower.color.red") + "\n" +
                 resourceBundle.getString("new.flower.color.orange") + "\n" +
@@ -130,7 +131,7 @@ public class View {
     }
 
     public void printSelectHoursAfterCutOffMessage() {
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
+        ResourceBundle resourceBundle = ResourceBundleManager.getResourceBundle();
         System.out.println(resourceBundle.getString("new.flower.hours"));
     }
 }
