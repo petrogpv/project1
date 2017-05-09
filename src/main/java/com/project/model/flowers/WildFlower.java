@@ -5,7 +5,11 @@ import java.util.List;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Class that represents wild flower
+ *
+ * @author Yaroslav Baranov
+ **/
 public class WildFlower extends Flower {
     private boolean havingBuld;
 

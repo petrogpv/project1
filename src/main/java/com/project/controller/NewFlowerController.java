@@ -14,7 +14,11 @@ import java.util.Scanner;
 
 /**
  * Created by Ярослав on 08.05.2017.
- */
+ *
+ * Class of controller for new flower
+ *
+ * @author Yaroslav Baranov
+ **/
 public class NewFlowerController {
     View view;
 
@@ -22,6 +26,13 @@ public class NewFlowerController {
         this.view = new View();
     }
 
+    /**
+     * Method to process creation of new flower
+     *
+     * @param scanner object of System scanner
+     *
+     * @return pointer to Flower object
+     **/
     public Flower processNewFlower(Scanner scanner) {
         Flower flower;
 
@@ -50,6 +61,13 @@ public class NewFlowerController {
         return flower;
     }
 
+    /**
+     * Method to get flower type from scanner
+     *
+     * @param scanner object of System scanner
+     *
+     * @return pointer to Flower object
+     **/
     private Flower chooseFlowerType(Scanner scanner) {
         final int BERRY_TYPE = 1;
         final int WILD_TYPE = 2;
@@ -83,6 +101,13 @@ public class NewFlowerController {
         }
     }
 
+    /**
+     * Method to read double value from scanner
+     *
+     * @param scanner object of System scanner
+     *
+     * @return double value
+     **/
     private double readDouble(Scanner scanner) {
         double value;
 
@@ -102,6 +127,13 @@ public class NewFlowerController {
         return value;
     }
 
+    /**
+     * Method to read boolean value from scanner
+     *
+     * @param scanner object of System scanner
+     *
+     * @return boolean value
+     **/
     private boolean readBoolean(Scanner scanner) {
         boolean value;
 
@@ -118,6 +150,13 @@ public class NewFlowerController {
         return value;
     }
 
+    /**
+     * Method to read get List of flower colors from user
+     *
+     * @param scanner object of System scanner
+     *
+     * @return list of colors
+     **/
     private List<FlowerColors> readColors(Scanner scanner){
         List<FlowerColors> colors = new ArrayList<>();
         final int END_CODE = 8;

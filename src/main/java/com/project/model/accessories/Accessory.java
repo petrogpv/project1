@@ -2,7 +2,11 @@ package com.project.model.accessories;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Class that represents accessory
+ *
+ * @author Yaroslav Baranov
+ **/
 public class Accessory {
 
     private AccessoryType type;

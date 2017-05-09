@@ -9,6 +9,10 @@ import java.util.Scanner;
 
 /**
  * Created by Ярослав on 07.05.2017.
+ *
+ * Main controller class
+ *
+ * @author Baranov Yaroslav
  */
 public class Controller {
 
@@ -18,6 +22,11 @@ public class Controller {
         this.view = new View();
     }
 
+    /**
+     * Method to process main menu
+     *
+     * @param scanner object of System scanner
+     **/
     public void processUser(Scanner scanner) {
         int userSelection = Constants.DEFAULT_SELECTION_CODE;
         while (userSelection != Constants.EXIT_CODE) {
@@ -44,6 +53,13 @@ public class Controller {
         }
     }
 
+    /**
+     * Method that check if given value is in diapason
+     *
+     * @param input given value to check
+     *
+     * @return result of comparing
+     **/
     private boolean checkInput(int input) {
         return input >= Constants.BOTTOM_SELECTION_VALUE && input <= Constants.TOP_SELECTION_VALUE;
     }
@@ -56,6 +72,14 @@ public class Controller {
         new NewBouquetController().processNewBouquet(scanner);
     }
 
+    /**
+     * Method that search flowers in given stem length diapason
+     *
+     * @param scanner object of System scanner
+     * @param bouquet object of Bouquet in which search will be processed
+     *
+     * @return result of search
+     **/
     protected List<Flower> processSearch(Scanner scanner, Bouquet bouquet){
         double min, max;
 

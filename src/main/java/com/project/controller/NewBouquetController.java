@@ -10,7 +10,11 @@ import java.util.Scanner;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Class of controller for new bouquet
+ *
+ * @author Yaroslav Baranov
+ **/
 public class NewBouquetController extends Controller {
 
     private final int BOTTOM_SELECTION_VALUE = 1;
@@ -30,6 +34,11 @@ public class NewBouquetController extends Controller {
         view = new View();
     }
 
+    /**
+     * Method to process bouquet
+     *
+     * @param scanner object of System scanner
+     **/
     public void processNewBouquet(Scanner scanner) {
         Bouquet bouquet = new FlowerBouquet();
         int userSelection = Constants.DEFAULT_SELECTION_CODE;
@@ -66,14 +75,35 @@ public class NewBouquetController extends Controller {
         }
     }
 
+    /**
+     * Method that check if given value is in diapason
+     *
+     * @param input given value to check
+     *
+     * @return result of comparing
+     **/
     private boolean checkInput(int input) {
         return input >= BOTTOM_SELECTION_VALUE && input <= TOP_SELECTION_VALUE;
     }
 
+    /**
+     * Method to get new flower
+     *
+     * @param scanner object of System scanner
+     *
+     * @return pointer to Flower object
+     **/
     private Flower getFlower(Scanner scanner) {
         return  new NewFlowerController().processNewFlower(scanner);
     }
 
+    /**
+     * Method to get new accessory
+     *
+     * @param scanner object of System scanner
+     *
+     * @return pointer to Accessory object
+     **/
     private Accessory getAccessory(Scanner scanner) {
         return new NewAccessoryController().processNewAccessory(scanner);
     }

@@ -1,7 +1,7 @@
 flower rose 3 22.4 false RED 10 3
 flower rose 4 27 false RED 10 4
-flower rose 5 27 false RED 12 4
+flower rose 5 27 false RED 12 2
 flower rose 7 31 false YELLOW 14 5
-flower rose 7 33.4 false BLUE 14 6
+flower rose 7 33.4 false BLUE 14 4
 accessory WRAPPING_PAPER 2
 accessory RIBBONS 3

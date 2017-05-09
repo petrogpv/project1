@@ -9,7 +9,11 @@ import java.util.ResourceBundle;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Class that provides messages for user
+ *
+ * @author Yaroslav Baranov
+ **/
 public class View {
 
     public <T> void printMessage(T message) {

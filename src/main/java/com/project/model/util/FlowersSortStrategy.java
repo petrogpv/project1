@@ -7,7 +7,11 @@ import java.util.List;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Realization of SortStrategy for sort flowers in bouquet by cutoff time
+ *
+ * @author Yaroslav Baranov
+ **/
 public class FlowersSortStrategy implements SortStrategy<Flower>{
     @Override
     public void sort(List<Flower> list) {

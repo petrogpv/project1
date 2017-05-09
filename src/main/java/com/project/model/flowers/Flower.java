@@ -7,7 +7,11 @@ import java.util.stream.Collectors;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Class that represents flower
+ *
+ * @author Yaroslav Baranov
+ **/
 public class Flower {
 
     private String name;

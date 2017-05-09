@@ -1,9 +1,5 @@
 package com.project;
 
-/**
- * Created by Ярослав on 09.05.2017.
- */
-
 import com.project.model.accessories.Accessory;
 import com.project.model.accessories.AccessoryType;
 import com.project.model.bouquet.Bouquet;
@@ -18,6 +14,13 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Created by Ярослав on 07.05.2017.
+ *
+ * Testing class for bouquet functionality
+ *
+ * @author Yaroslav Baranov
+ **/
 public class BouquetTest {
 
     @Test

@@ -5,7 +5,11 @@ import java.util.List;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Class that represents berry flower
+ *
+ * @author Yaroslav Baranov
+ **/
 public class BerryFlower extends Flower {
 
     private int numberOfBerries;

@@ -2,7 +2,11 @@ package com.project.model.accessories;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Enum of available accessory types
+ *
+ * @author Yaroslav Baranov
+ **/
 public enum AccessoryType {
     WRAPPING_PAPER("wrapping paper"), RIBBONS("ribbons");
 

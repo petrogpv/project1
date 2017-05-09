@@ -11,11 +11,17 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
+/**
+ * Created by Ярослав on 07.05.2017.
+ *
+ * Main class
+ *
+ * @author Yaroslav Baranov
+ **/
 public class Main {
 
     public static void main(String[] args) {
         Controller controller = new Controller();
-
         controller.processUser(new Scanner(System.in));
     }
 }

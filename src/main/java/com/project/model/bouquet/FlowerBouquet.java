@@ -10,7 +10,11 @@ import java.util.List;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Realization of Bouquet interface
+ *
+ * @author Yaroslav Baranov
+ **/
 public class FlowerBouquet implements Bouquet {
 
     private List<Flower> flowers;

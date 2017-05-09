@@ -2,7 +2,11 @@ package com.project.model.flowers;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Enum of available flower colors
+ *
+ * @author Yaroslav Baranov
+ **/
 public enum FlowerColors {
     RED("red"), ORANGE("orange"), BLUE("blue"), WHITE("white"),
     GREEN("green"), YELLOW("yellow"), PINK("pink");

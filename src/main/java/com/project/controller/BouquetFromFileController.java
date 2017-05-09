@@ -16,7 +16,11 @@ import java.util.*;
 
 /**
  * Created by Ярослав on 07.05.2017.
- */
+ *
+ * Class of controller for bouquet from file
+ *
+ * @author Baranov Yaroslav
+ **/
 public class BouquetFromFileController extends Controller{
 
     private final int BOTTOM_SELECTION_VALUE = 1;
@@ -33,6 +37,11 @@ public class BouquetFromFileController extends Controller{
         this.view = new View();
     }
 
+    /**
+     * Method to process test bouquet from file
+     *
+     * @param scanner object of System scanner
+     **/
     public void processBouquetFromFile(Scanner scanner) {
         Bouquet bouquet = initializeBouquet();
         int userSelection = Constants.DEFAULT_SELECTION_CODE;
@@ -63,10 +72,22 @@ public class BouquetFromFileController extends Controller{
         }
     }
 
+    /**
+     * Method that check if given value is in diapason
+     *
+     * @param input given value to check
+     *
+     * @return result of comparing
+     **/
     private boolean checkInput(int input) {
         return input >= BOTTOM_SELECTION_VALUE && input <= TOP_SELECTION_VALUE;
     }
 
+    /**
+     * Method that read bouquet from file
+     *
+     * @return pointer to Bouquet object
+     **/
     private FlowerBouquet initializeBouquet() {
         List<String[]> entries = getEntriesFromFile(Constants.BOUQUET_FILE_PATH);
         FlowerBouquet.Builder builder = FlowerBouquet.newBuilder();
@@ -85,6 +106,13 @@ public class BouquetFromFileController extends Controller{
         return builder.build();
     }
 
+    /**
+     * Method that construct flower from array of strings
+     *
+     * @param entry given array of Strings
+     *
+     * @return pointer to Flower object
+     **/
     private Flower constructFlower(String[] entry) {
         Flower flower = new Flower();
 
@@ -99,6 +127,13 @@ public class BouquetFromFileController extends Controller{
         return flower;
     }
 
+    /**
+     * Method that construct flower from array of strings
+     *
+     * @param entry given array of Strings
+     *
+     * @return pointer to Accessory object
+     **/
     private Accessory constructAccessory(String[] entry) {
         Accessory accessory = new Accessory();
 
@@ -108,6 +143,13 @@ public class BouquetFromFileController extends Controller{
         return accessory;
     }
 
+    /**
+     * Method that extract from file arrays of strings, which represents bouquet entries
+     *
+     * @param path path to file
+     *
+     * @return List os Strings arrays thar represents bouquet entry
+     **/
     private List<String[]> getEntriesFromFile(String path) {
         List<String[]> entries = new ArrayList<>();
 

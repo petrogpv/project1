@@ -8,7 +8,11 @@ import java.util.Scanner;
 
 /**
  * Created by Ярослав on 08.05.2017.
- */
+ *
+ * Class of controller for new accessory
+ *
+ * @author Yaroslav Baranov
+ **/
 public class NewAccessoryController {
 
     private final int DEFAULT_ACCESSORY_TYPE = 0;
@@ -21,6 +25,13 @@ public class NewAccessoryController {
         this.view = new View();
     }
 
+    /**
+     * Method to process creation of new accessory
+     *
+     * @param scanner object of System scanner
+     *
+     * @return pointer to Accessory object
+     **/
     public Accessory processNewAccessory(Scanner scanner){
         Accessory accessory = new Accessory();
         int accessoryTypeCode = DEFAULT_ACCESSORY_TYPE;
@@ -58,10 +69,25 @@ public class NewAccessoryController {
         return accessory;
     }
 
+    /**
+     * Method that check if given value is in diapason
+     *
+     * @param input given value to check
+     *
+     * @return result of comparing
+     **/
     public boolean checkUserSelection(int input) {
         return input == WRAPPING_PAPER || input == RIBBONS;
     }
 
+
+    /**
+     * Method to get price of accessory from user
+     *
+     * @param scanner object of System scanner
+     *
+     * @return price of accessory
+     **/
     public double choosePrice(Scanner scanner) {
         double price;
 
