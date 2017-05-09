@@ -26,8 +26,9 @@ public class FlowerBouquet implements Bouquet {
     }
 
     @Override
-    public void sort() {
+    public List<Flower> sort() {
         sortStrategy.sort(flowers);
+        return flowers;
     }
 
     @Override

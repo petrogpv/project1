@@ -85,6 +85,26 @@ public class Flower {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if(!(obj instanceof Flower)) {
+            return false;
+        }
+
+        Flower flower = (Flower) (obj);
+
+        return this.budDiameter == flower.budDiameter &&
+               this.stemLength == flower.stemLength &&
+               this.isSpiked == flower.isSpiked &&
+               this.colors.equals(flower.colors) &&
+               this.price == flower.price &&
+               this.hoursAfterCutoff == flower.hoursAfterCutoff;
+    }
+
+    @Override
     public String toString() {
         return "{bud diameter: " + budDiameter +
                ", stem length: " + stemLength +

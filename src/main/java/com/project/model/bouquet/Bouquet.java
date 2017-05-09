@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface Bouquet {
 
-    public void sort();
+    public List<Flower> sort();
 
     public double getPrice();
 
